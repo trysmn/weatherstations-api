@@ -1,0 +1,2 @@
+class ClimatedatasController < ApplicationController
+end

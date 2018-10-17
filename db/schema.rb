@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_17_212145) do
+ActiveRecord::Schema.define(version: 2018_10_17_212838) do
 
   create_table "climatedata", force: :cascade do |t|
     t.float "max_temp"
@@ -21,15 +21,11 @@ ActiveRecord::Schema.define(version: 2018_10_17_212145) do
     t.integer "month"
     t.integer "year"
     t.integer "weatherstation_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
     t.index ["weatherstation_id"], name: "index_climatedata_on_weatherstation_id"
   end
 
   create_table "weatherstations", force: :cascade do |t|
     t.string "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
 end

@@ -7,6 +7,6 @@ FactoryBot.define do
     total_sunshine { Faker::Number.decimal(2, 1) }
     month { Faker::Number.between(1, 12) }
     year { Faker::Number.between(1, 10000) }
-    weatherstation_id nil
+    weatherstation_id { nil }
   end
 end

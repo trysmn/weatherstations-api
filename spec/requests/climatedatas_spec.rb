@@ -87,7 +87,7 @@ RSpec.describe 'Climatedatas API' do
       end
 
       it 'returns a failure message' do
-        expect(response.body).to match(/Validation failed: Max_temp can't be blank, Min_temp can't be blank, Mean_temp can't be blank, Total_rainfall can't be blank, Total_sunshine can't be blank, Month can't be blank, Year can't be blank/)
+        expect(response.body).to match(/Validation failed: Min temp can't be blank, Max temp can't be blank, Mean temp can't be blank, Total rainfall can't be blank, Total sunshine can't be blank, Month can't be blank, Year can't be blank/)
       end
     end
   end
@@ -106,13 +106,13 @@ RSpec.describe 'Climatedatas API' do
 
       it 'updates the climatedata' do
         updated_climatedata = Climatedata.find(id)
-        expect(updated_climatedata.max_temp).to match(/22.6/)
-        expect(updated_climatedata.min_temp).to match(/10.4/)
-        expect(updated_climatedata.mean_temp).to match(/15.8/)
-        expect(updated_climatedata.total_rainfall).to match(/70.8/)
-        expect(updated_climatedata.total_sunshine).to match(/100.3/)
-        expect(updated_climatedata.month).to match(/7/)
-        expect(updated_climatedata.year).to match(/1978/)
+        expect(updated_climatedata.max_temp).to match(22.6)
+        expect(updated_climatedata.min_temp).to match(10.4)
+        expect(updated_climatedata.mean_temp).to match(15.8)
+        expect(updated_climatedata.total_rainfall).to match(70.8)
+        expect(updated_climatedata.total_sunshine).to match(100.3)
+        expect(updated_climatedata.month).to match(7)
+        expect(updated_climatedata.year).to match(1978)
       end
     end
 
